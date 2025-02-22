@@ -1,0 +1,38 @@
+{% extends 'layout.html' %} 
+
+{% block title %}
+NikeTop7 - Most Sold Nike Shoes
+{% endblock %}
+
+{% block content %}
+    <!-- Shoes Section -->
+<div id="shoes" class="services">
+  <h1>Top 7 Most Sold Nike Shoes</h1>
+  <div class="services__container">
+    <!-- Shoe Card Template -->
+    {% for row in shoes_listing %} <!-- Changed from 'content' to 'shoes_listing' to be more clear'-->
+      <div class="services__card">
+        <img 
+          src="{{ row['image_path'] }}" 
+          alt="{{ row['image_description'] }}">
+        <h2>{{ row['model_name'] }}</h2>
+        <p>
+          {{ row['model_desc'] }} 
+        <br>
+        <br>
+          Available sizes: {{ row['size_min'] }} - {{ row['size_max'] }}
+        </p>
+        <p class="price">${{ row['price'] }}</p>
+        <button>Buy Now</button>
+      </div>
+    {% endfor %}
+
+  </div>
+</div>
+{% endblock %}
+
+
+<!-- Added dynamic Flask routes for all files -->
+<!-- Removed exgra <p> and <div> tages at end of code -->
+<!-- Missing class="btn" on Buttons - Your <button> tags are unstyled unless your CSS has default styling:-->
+<!-- Incorporated Jinja 2 for loop -->

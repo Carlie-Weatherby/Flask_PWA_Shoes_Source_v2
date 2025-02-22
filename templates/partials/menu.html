@@ -1,0 +1,60 @@
+<!-- Navbar Section -->
+<nav class="navbar">
+  <div class="navbar__container">
+    <a href="{{ url_for('index') }}" id="navbar__logo">
+      <i class="fas fa-shoe-prints"></i>NikeTop7</a>
+    <div class="navbar__toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+        <a href="{{ url_for('index') }}" class="navbar__links">Home</a>
+      </li>
+      <li class="navbar__item">
+        <a href="{{ url_for('about') }}" class="navbar__links">About</a>
+      </li>
+      <li class="navbar__item">
+        <a href="#shoes" class="navbar__links">Shoes</a>
+      </li>
+      <li class="navbar__btn">
+        <!-- Temporary link to homepage. Signup page does not exist yet-->
+        <a href="{{ url_for('index') }}" class="button">Sign Up</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero">
+  <div class="hero__container">
+    <div class="hero__content">
+      <h1>Top 7 Most Sold</h1>
+      <h2>Nike Shoes</h2>
+      <p>Discover the best-selling Nike shoes of all time.</p>
+      <!-- ISSUE BELOW - <button> should not wrap an <a> tag—this is invalid HTML. Danial- lok into this-->
+      <!--<button class="main__btn"><a href="#shoes">See the List</a></button> -->
+      <!-- Temp solution only. Need JavaScript? -->
+      <a href="#shoes" class="hero__btn">See the List</a>  
+      </div>
+    <div class="hero__img--container">
+      <img
+        id="hero__img"
+        src="{{ url_for('static', filename='images/logo_black.webp') }}"
+        alt="Nike Logo">
+    </div>
+  </div>
+</div>
+
+
+<!-- CW: Fixed the img src to be dynamic for Flask     (url_for())   -->
+<!-- CW: Fixed incorrect reference to Home page "/" where 'sign_up.html' or similar was needed -->
+<!-- DA: REMOVED SPACES FROM ALL IMAGE FILE NAMES - used underscores instead -->
+<!-- CW: Added dynamic Flask routes for all files -->
+<!-- CW: I swapped the order - NOW display hero/banner then navbar below -->
+<!-- CF: Changed references of "main" to "hero" - more meaningful ideantifier (CSS also updated) -->
+<!-- x -->
+<!-- x -->
+<!-- x -->
+<!-- x -->

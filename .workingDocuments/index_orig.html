@@ -1,0 +1,93 @@
+{% extends 'layout.html' %} 
+
+{% block title %}
+NikeTop7 - Most Sold Nike Shoes
+{% endblock %}
+
+{% block content %}
+
+    <!-- Shoes Section -->
+<div id="shoes" class="services">
+  <h1>Top 7 Most Sold Nike Shoes</h1>
+  <div class="services__container">
+    <!-- Shoe Card Template -->
+    <div class="services__card">
+      <img src="{{ url_for('static', filename='images/Air_Max_1.jpg') }}" alt="Nike Air Max 1">
+      <h2>Nike Air Max 1</h2>
+      <p>
+        The revolutionary Air technology first appeared in this shoe. <br />
+        Available sizes: 7-16
+      </p>
+      <p class="price">$150.00</p>
+      <button>Buy Now</button>
+    </div>
+    <div class="services__card">
+      <img src="{{ url_for('static', filename='images/Air_Jordan_1.png') }}" alt="Nike Air Jordan 1">
+      <h2>Nike Air Jordan 1</h2>
+      <p>
+        The shoe that started it all for the Jordan brand. <br />
+        Available sizes: 7-16
+      </p>
+      <p class="price">$160.00</p>
+      <button>Buy Now</button>
+    </div>
+    <div class="services__card">
+      <img src="{{ url_for('static', filename='images/Air_Force_1.png') }}" alt="Nike Air Force 1">
+      <h2>Nike Air Force 1</h2>
+      <p>
+        Known for its comfort and iconic design. <br />
+        Available sizes: 7-16
+      </p>
+      <p class="price">$120.00</p>
+      <button>Buy Now</button>
+    </div>
+    <div class="services__card">
+      <img src="{{ url_for('static', filename='images/Roshe_G.png') }}" alt="Nike Roshe Run">
+      <h2>Nike Roshe Run</h2>
+      <p>
+        A minimalist design that's perfect for casual wear. <br />
+        Available sizes: 7-16
+      </p>
+      <p class="price">$75</p>
+      <button>Buy Now</button>
+    </div>
+    <div class="services__card">
+      <img src="{{ url_for('static', filename='images/Dunk.png') }}" alt="Nike Dunk">
+      <h2>Nike Dunk</h2>
+      <p>
+        A classic that has seen numerous colorways and collaborations.
+        <br />
+        Available sizes: 7-16
+      </p>
+      <p class="price">$100</p>
+      <button>Buy Now</button>
+    </div>
+    <div class="services__card">
+      <img src="{{ url_for('static', filename='images/Blazer.png') }}" alt="Nike Blazer">
+      <h2>Nike Blazer</h2>
+      <p>
+        One of Nike's earliest basketball shoes, now a lifestyle favorite.
+        <br />
+        Available sizes: 7-16
+      </p>
+      <p class="price">$110</p>
+      <button>Buy Now</button>
+    </div>
+    <div class="services__card">
+      <img src="{{ url_for('static', filename='images/Cortez.png') }}" alt="Nike Cortez">
+      <h2>Nike Cortez</h2>
+      <p>
+        A timeless running shoe that became a cultural icon. <br />
+        Available sizes: 7-16
+      </p>
+      <p class="price">$85</p>
+      <button>Buy Now</button>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+<!-- Added dynamic Flask routes for all files -->
+<!-- Removed exgra <p> and <div> tages at end of code -->
+<!-- Missing class="btn" on Buttons - Your <button> tags are unstyled unless your CSS has default styling:-->
